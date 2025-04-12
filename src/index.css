@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "KumbhSans";
+  src: url('src/assets/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf');
+  font-style: normal;
+}
+
+:root{
+  --font-family: "KumbhSans", sans-serif;
+  --very-dark-blue :hsl(220, 13%, 13%);
+}
+
+@layer base{
+  body{
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--very-dark-blue);
+  }
+}
+
+@layer utilities{
+  .visually-hidden{
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
