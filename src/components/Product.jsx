@@ -1,8 +1,7 @@
 import { useState } from "react";
 import ProductCarousel from "./ProductCarousel";
 import QuantitySelector from "./QuantitySelector";
-import LightBox from "./LightBox";
-
+import ProductImageLightbox from "./ProductImageLightbox";
 const productData = {
   productId: Math.random().toString().substring(2, 8),
   productImages: [
@@ -57,7 +56,7 @@ function ProductDisplay({ productImages, productThumbnails }){
       </div>
       <div className="hidden md:flex flex-col gap-4">
         <div className={`${openLightbox ? "opacity-100 visible" : "opacity-0 invisible"} transition-all duration-300`}>
-          <LightBox 
+          <ProductImageLightbox 
             productImages={productImages}
             productThumbnails={productThumbnails}
             setOpenLightbox={setOpenLightbox}

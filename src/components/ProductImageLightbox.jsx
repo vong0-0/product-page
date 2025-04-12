@@ -1,7 +1,7 @@
 import { X } from "lucide-react"
 import { useState } from "react"
 
-export default function LightBox({ productImages, productThumbnails, setOpenLightbox }){
+export default function ProductImageLightbox({ productImages, productThumbnails, setOpenLightbox }){
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
   return(
     <div className="bg-[rgba(0,0,0,0.75)] fixed left-0 top-0 w-full h-screen z-50">
